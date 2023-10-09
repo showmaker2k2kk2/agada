@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float bulletSpeed = 10.0f;
+    protected int dameshoogun = 5;
 
     void Update()
     {
@@ -14,8 +15,9 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // Xử lý va chạm với các đối tượng khác
-        // Ví dụ: hủy đối tượng đạn khi va chạm
+        ITakadame dame =GetComponent<ITakadame>();
+        dame?.TakeDame(dameshoogun);
+      
         Destroy(gameObject);
     }
 }

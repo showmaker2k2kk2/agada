@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class charracter : MonoBehaviour
+public class charracter : MonoBehaviour, ITakadame
 {
 
     public Slider slider;
 
     public int maxHeathl = 100;
     public int currentHeathl;
-    protected int dameshoogun=5;
+   
 
 
 
@@ -41,6 +41,5 @@ public class charracter : MonoBehaviour
         Debug.Log("mau cua may la" + currentHeathl);
         setHeath(currentHeathl);
     }
-
 
 }
