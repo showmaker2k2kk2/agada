@@ -9,7 +9,7 @@ public class movejoy : MonoBehaviour
     public float speed = 3f;
     public float tocdoxoay = 10f;
 
-  public VariableJoystick joystick;
+   public VariableJoystick joystick;
      public Canvas canvas;
     private bool dangnhanjoystick=false;
     private void Awake()
