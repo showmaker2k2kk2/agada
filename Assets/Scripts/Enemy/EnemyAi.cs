@@ -5,11 +5,13 @@ using UnityEngine;
 using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
 
-public class EnemyAi : MonoBehaviour
+public class EnemyAi : charracter
 {
     public NavMeshAgent agent;
     public Transform[] diemden;
     public Transform player;
+    private charracter character;
+
 
     private int diempointhenai;
     public float speed;
@@ -24,6 +26,7 @@ public class EnemyAi : MonoBehaviour
 
     private void Start()
     {
+        base.Start();
         agent = GetComponent<NavMeshAgent>();
         diempointhenai = 0;
         dichuyenwaypoint();
@@ -90,5 +93,12 @@ public class EnemyAi : MonoBehaviour
         }    
         
        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("bulet"))
+        {
+            TakeDame(dameshoogun);
+        }
     }
 }   

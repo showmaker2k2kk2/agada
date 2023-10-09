@@ -21,11 +21,11 @@ public class shoot : MonoBehaviour
     void Shoot()
     {
 
-        GameObject bullet = Instantiate(bulletPrefab,bulletSpawnPoint.position,bulletSpawnPoint.transform.rotation);
+        GameObject bullet = Instantiate(bulletPrefab,bulletSpawnPoint.position,Quaternion.identity);
 
         
          Rigidbody bulletController = bullet.GetComponent<Rigidbody>();
-        bulletController.AddForce(bulletController.transform.forward * bulletSpeed);
+        bulletController.AddForce(bulletSpawnPoint.transform.forward * bulletSpeed);
         Destroy(bullet, 3);
 
         

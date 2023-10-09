@@ -3,31 +3,26 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class hero : MonoBehaviour
+public class hero :charracter
 {
-    public int maxHeathl = 100;
-    public int currentHeathl;
-    public charracter heathbar;
+   
+    private charracter heathbar;
 
-    void Start()
+    protected override void Start()
     {
-        currentHeathl = maxHeathl;
-
+     
+        base.Start();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-            TakeDame(20);
+            heathbar.TakeDame(20);
         }
     }
-    void TakeDame(int dame)
-    {
-        currentHeathl = currentHeathl - dame;
-        Debug.Log("mau cua may la" + currentHeathl);
-        heathbar.setHeath(currentHeathl);
-    }
+
+      
 
 }
