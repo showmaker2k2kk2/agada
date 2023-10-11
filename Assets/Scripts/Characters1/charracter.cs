@@ -32,7 +32,7 @@ public class charracter : MonoBehaviour, ITakadame
     {
         if (other.gameObject.CompareTag("bulet"))
         {
-            TakeDame(dameshoogun);
+            TakeDame(5);
         }
     }
     public void TakeDame(int dame)

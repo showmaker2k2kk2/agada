@@ -94,11 +94,11 @@ public class EnemyAi : charracter
         
        
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("bulet"))
-        {
-            TakeDame(dameshoogun);
-        }
-    }
+    //private void/* OnTriggerEnter*/(Collider other)
+    //{
+    //    if(other.gameObject.CompareTag("bulet"))
+    //    {
+    //        TakeDame(5);
+    //    }
+    //}
 }   

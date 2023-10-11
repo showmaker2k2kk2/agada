@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class shoot : MonoBehaviour
 {
-    
+
     public GameObject bulletPrefab;  // Prefab của đạn
     public Transform bulletSpawnPoint;  // Vị trí khởi tạo đạn
-    public float bulletSpeed ;  // Tốc độ của đạn
+    public float bulletSpeed;  // Tốc độ của đạn
     Bullet BU;
 
     void Update()
@@ -21,14 +21,15 @@ public class shoot : MonoBehaviour
     void Shoot()
     {
 
-        GameObject bullet = Instantiate(bulletPrefab,bulletSpawnPoint.position,Quaternion.identity);
 
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.identity);
         
-         Rigidbody bulletController = bullet.GetComponent<Rigidbody>();
+
+        Rigidbody bulletController = bullet.GetComponent<Rigidbody>();
         bulletController.AddForce(bulletSpawnPoint.transform.forward * bulletSpeed);
         Destroy(bullet, 3);
 
-        
+
     }
 
 

@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        ITakadame dame =GetComponent<ITakadame>();
+        ITakadame dame =GetComponent <ITakadame>();
         dame?.TakeDame(dameshoogun);
       
         Destroy(gameObject);
